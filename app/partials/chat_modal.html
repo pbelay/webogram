@@ -1,8 +1,8 @@
 <div class="chat_modal_wrap">
 
   <div class="modal-header">
-    <a class="modal-close-link visible-xs" ng-click="$close()">Close</a>
-    <h4 class="modal-title">Group Info</h4>
+    <a class="modal-close-link visible-xs" ng-click="$close()">Cerrar</a>
+    <h4 class="modal-title">Información de grupo</h4>
   </div>
 
   <div class="modal-body">
@@ -24,28 +24,28 @@
 
       <div class="chat_modal_settings_wrap">
         <div class="chat_modal_notifications">
-          Notifications:
+          Notificacións:
           <a ng-click="settings.notifications = !settings.notifications">
             {{settings.notifications ? 'ON' : 'OFF'}}
           </a>
         </div>
 
         <div class="chat_modal_clear">
-          <a href="" ng-click="flushHistory()">Clear History</a>
+          <a href="" ng-click="flushHistory()">Limpiar historial</a>
         </div>
 
         <div class="chat_modal_leave_join" ng-if="chatFull.chat._ != 'chatForbidden'">
           <div class="chat_modal_leave"  ng-if="!chatFull.chat.left">
-            <a href="" ng-click="leaveGroup()">Leave group</a>
+            <a href="" ng-click="leaveGroup()">Saír do grupo</a>
           </div>
           <div class="chat_modal_leave" ng-if="chatFull.chat.left">
-            <a href="" ng-click="returnToGroup()">Return to group</a>
+            <a href="" ng-click="returnToGroup()">Volver ao grupo</a>
           </div>
         </div>
       </div>
     </div>
 
-    <h5 class="chat_modal_members_header">Members</h5>
+    <h5 class="chat_modal_members_header">Membros</h5>
     <div class="chat_modal_members_list">
 
       <div class="chat_modal_participant_wrap clearfix" ng-repeat="participant in chatFull.participants.participants">
@@ -66,7 +66,7 @@
     </div>
 
     <div class="chat_modal_members_forbidden" ng-if="chatFull.chat._ == 'chatForbidden' || chatFull.chat.left">
-      Group members list is unavailable.
+      A lista de membros do grupo non está dispoñible
     </div>
 
   </div>

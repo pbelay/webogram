@@ -21,7 +21,7 @@
     </div>
 
     <div class="im_history_col_wrap" ng-controller="AppImHistoryController">
-      <div ng-if="state.notSelected" class="im_history_not_selected">No history to display</div>
+      <div ng-if="state.notSelected" class="im_history_not_selected">Non existe historial para amosar</div>
 
       <div ng-if="state.loaded">
         <div my-history class="im_history_col">
@@ -107,7 +107,7 @@
                   />
                 </div>
                 <form my-send-form draft-message="draftMessage" class="im_send_form" ng-submit="sendMessage($event)">
-                  <div class="im_send_dropbox_wrap"> Drop photos here to send </div>
+                  <div class="im_send_dropbox_wrap"> Arrastra fotos aquí para enviar </div>
                   <textarea ng-model="draftMessage.text" placeholder="Write a message..." class="form-control im_message_field"></textarea>
 
                   <div class="im_emoji_btn pull-right">
@@ -124,7 +124,7 @@
                     <i class="icon icon-camera"></i>
                   </div>
 
-                  <button type="submit" class="btn btn-tg im_submit">Send</button>
+                  <button type="submit" class="btn btn-tg im_submit">Enviar</button>
                 </form>
               </div>
 
@@ -144,7 +144,7 @@
 </div>
 
 <div class="im_page_footer">
-  <a class="im_page_footer_brand" target="_blank" href="https://github.com/zhukov/webogram">Telegram alpha</a> by izhukov &amp; toberg
+  <a class="im_page_footer_brand" target="_blank" href="https://github.com/pbelay/webogram">Telegram Galician alpha </a> by belay &amp; toberg
 </div>
 
 <div id="notify_sound"></div>
