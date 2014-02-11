@@ -5,10 +5,10 @@
   <div class="error" ng-if="error.message">{{ error.message }}</div>
   <form name="mySendCodeForm" ng-if="!credentials.phone_code_hash" ng-submit="sendCode()">
     <h3 class="login_form_head">Rexistrarse</h3>
-    <p class="login_form_lead">Introduce o teu n&uacutemero de tel&eacutefono completo co teu c&oacutedigo de pa&iacutes (+34).</p>
+    <p class="login_form_lead">Introduce o teu n&uacute;mero de tel&eacute;fono completo co teu c&oacute;digo de pa&iacute;s (+34).</p>
 
     <div class="form-group" ng-class="{'has-error': error.field == 'phone'}">
-      <label class="control-label" for="phone_number" ng-if="error.field == 'phone'">N&uacutemero de tel&eacutefono incorrecto</label>
+      <label class="control-label" for="phone_number" ng-if="error.field == 'phone'">N&uacute;mero de tel&eacute;fono incorrecto</label>
       <input type="text" class="form-control" name="phone_number" ng-model="credentials.phone_number" placeholder="Introduce o teu mobil " required>
     </div>
     <button class="btn btn-tg btn-block" ng-class="{disabled: progress.enabled}" ng-disabled="progress.enabled" type="submit">
@@ -18,16 +18,16 @@
 
   <form name="myLoginForm" ng-if="credentials.phone_code_hash" ng-submit="logIn()">
     <h3 class="login_form_head">{{ credentials.phone_number | phoneNumber }} <small>(<a href="#/auth">editar</a>)</small></h3>
-    <p class="login_form_lead">N&oacutes enviamoslle un c&oacutedigo v&iacutea SMS.<br/>Por favor escribao .</p>
+    <p class="login_form_lead">N&oacute;s enviamoslle un c&oacute;digo v&iacute;a SMS.<br/>Por favor escribao .</p>
 
     <p class="login_form_lead">
       <span ng-show="callPending.remaining > 0">Telegram vaino chamar en {{callPending.remaining | duration}}</span>
       <span ng-show="!callPending.remaining &amp;&amp; !callPending.success">Telegram estao chamando</span>
-      <span ng-show="!callPending.remaining &amp;&amp; callPending.success">Telegram chamouno ao seu tel&eacute </span>
+      <span ng-show="!callPending.remaining &amp;&amp; callPending.success">Telegram chamouno ao seu tel&eacute; </span>
     </p>
 
     <div class="form-group" ng-class="{'has-error': error.field == 'phone_code'}">
-      <label class="control-label" for="phone_code" ng-if="error.field == 'phone_code'">C&oacutedigo SMS incorrecto</label>
+      <label class="control-label" for="phone_code" ng-if="error.field == 'phone_code'">C&oacute;digo SMS incorrecto</label>
       <input type="text" class="form-control" name="phone_code" ng-model="credentials.phone_code" placeholder="Introduzca o seu codigo" required>
     </div>
 
