@@ -100,7 +100,7 @@ angular.module('myApp.controllers', [])
             break;
 
           default:
-            ErrorService.showSimpleError('Unknown error occured', 'Please check your internet connection or install the latest version of Google Chrome browser.');
+            ErrorService.showSimpleError('Unknown error occured', 'Por favor, comprobe a  sua conexion a Internet ou instala a ultima version do navegador Google Chrome.');
         }
       });
     }
@@ -612,7 +612,7 @@ angular.module('myApp.controllers', [])
     };
 
     $scope.flushHistory = function () {
-      if (confirm('Are you sure? This can not be undone!') !== true) {
+      if (confirm('Esta seguro? Isto non ten volta atras!') !== true) {
         return false;
       }
       AppMessagesManager.flushHistory(AppPeersManager.getInputPeerByID($scope.userID)).then(function () {
@@ -688,7 +688,7 @@ angular.module('myApp.controllers', [])
 
 
     $scope.flushHistory = function () {
-      if (confirm('Are you sure? This can not be undone!') !== true) {
+      if (confirm('Esta seguro? Isto non ten volta atras!') !== true) {
         return;
       }
       AppMessagesManager.flushHistory(AppPeersManager.getInputPeerByID(-$scope.chatID)).then(function () {
