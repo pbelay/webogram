@@ -6,7 +6,7 @@
 
     <div class="im_dialogs_col_wrap" ng-controller="AppImDialogsController">
       <div class="im_dialogs_search">
-        <input class="form-control im_dialogs_search_field" type="search" placeholder="Search" ng-model="search.query"/>
+        <input class="form-control im_dialogs_search_field" type="search" placeholder="Buscar..." ng-model="search.query"/>
         <a class="im_dialogs_search_clear" ng-click="search.query = ''" ng-show="search.query.length"></a>
       </div>
       <div my-dialogs-list class="im_dialogs_col">
@@ -44,7 +44,7 @@
                 </div>
 
                 <div ng-if="historyPeer.id > 0" ng-click="openUser(historyPeer.id)">
-                  <span class="im_history_panel_info_link pull-right">Info</span>
+                  <span class="im_history_panel_info_link pull-right">Informaci&oacuten</span>
                   <h4>
                     <span ng-bind-html="historyPeer.data.rFullName"></span>
                     <small class="im_peer_online">{{historyPeer.data | userStatus}}</small>
@@ -108,7 +108,7 @@
                 </div>
                 <form my-send-form draft-message="draftMessage" class="im_send_form" ng-submit="sendMessage($event)">
                   <div class="im_send_dropbox_wrap"> Arrastra fotos aquí para enviar </div>
-                  <textarea ng-model="draftMessage.text" placeholder="Write a message..." class="form-control im_message_field"></textarea>
+                  <textarea ng-model="draftMessage.text" placeholder="Escribir unha mensaxe..." class="form-control im_message_field"></textarea>
 
                   <div class="im_emoji_btn pull-right">
                     <i class="icon icon-emoji"></i>
@@ -144,7 +144,7 @@
 </div>
 
 <div class="im_page_footer">
-  <a class="im_page_footer_brand" target="_blank" href="https://github.com/pbelay/webogram">Telegram Galician alpha </a> by belay &amp; toberg
+  <a class="im_page_footer_brand" target="_blank" href="https://github.com/pbelay/webogram">Telegram Galician alpha </a> is a fork of webogram 
 </div>
 
 <div id="notify_sound"></div>
